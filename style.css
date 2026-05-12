@@ -61,8 +61,8 @@ h1, h2, h3 { font-family: 'Outfit', sans-serif; font-weight: 700; }
 .hero-subtitle { font-size: 1.15rem; color: var(--text-muted); margin-bottom: 40px; max-width: 520px; }
 
 .hero-cta-group { display: flex; gap: 16px; margin-bottom: 60px; }
-.btn-whatsapp { background: var(--primary); color: #fff; padding: 16px 32px; font-size: 1.05rem; display: flex; align-items: center; gap: 10px; }
-.btn-whatsapp:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(34, 197, 94, 0.2); }
+.btn-whatsapp { background: var(--teal); color: #fff; padding: 16px 32px; font-size: 1.05rem; display: flex; align-items: center; gap: 10px; }
+.btn-whatsapp:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(26, 188, 156, 0.3); }
 .btn-ghost { background: #f8fafc; color: var(--text-dark); padding: 16px 32px; font-size: 1.05rem; display: flex; align-items: center; gap: 10px; }
 .btn-ghost:hover { background: #f1f5f9; }
 
@@ -133,7 +133,7 @@ h1, h2, h3 { font-family: 'Outfit', sans-serif; font-weight: 700; }
 
 .expertise-content-wrapper { display: flex; flex-direction: column; justify-content: space-between; padding: 10px 0; height: 100%; }
 
-.expertise-heading-teal { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 2.8rem; color: var(--teal); margin-bottom: 0; line-height: 1.1; letter-spacing: -1px; white-space: nowrap; }
+.expertise-heading-teal { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 2.8rem; color: var(--teal); margin-bottom: 0; line-height: 1.1; letter-spacing: -1px; white-space: normal; word-break: break-word; }
 .expertise-desc { color: var(--text-dark); font-size: 1.1rem; line-height: 1.8; margin-bottom: 0; font-family: 'Inter', sans-serif; font-weight: 400; }
 
 .expertise-check-list { list-style: none; margin-top: 0; margin-bottom: 0; }
@@ -433,13 +433,19 @@ h1, h2, h3 { font-family: 'Outfit', sans-serif; font-weight: 700; }
     .expertise-heading-teal { font-size: 1.9rem; }
     .expertise-check-list li { font-size: 0.97rem; gap: 10px; }
 
+    /* Expertise Detail Section */
+    .clinical-expertise-section { padding-top: 55px; padding-bottom: 55px; }
+    .expertise-content-wrapper { padding: 0; overflow: hidden; }
+    .expertise-check-list li { font-size: 0.95rem; gap: 10px; }
+    .expertise-desc { font-size: 0.95rem; line-height: 1.7; }
+
     /* About Doctor */
     .about-doctor-section { padding: 55px 0; }
     .about-doc-layout { gap: 35px; text-align: center; }
     .about-doc-image { max-width: 100%; padding: 10px; }
     .about-doc-content { text-align: center; }
     .doc-main-heading { font-size: 2rem !important; }
-    .doc-para { font-size: 0.97rem; text-align: left; }
+    .doc-para { font-size: 0.97rem; text-align: center; }
     .doc-features-grid { grid-template-columns: 1fr 1fr; display: grid; text-align: left; }
     .doc-feature-item { font-size: 0.9rem; }
     .doc-experience-badge { right: 5px; bottom: -15px; padding: 10px 15px; }
@@ -472,10 +478,16 @@ h1, h2, h3 { font-family: 'Outfit', sans-serif; font-weight: 700; }
     /* Footer */
     .main-footer { padding-top: 45px; }
     .footer-grid { grid-template-columns: 1fr; gap: 30px; }
-    .footer-col h3 { font-size: 1.1rem; margin-bottom: 18px; }
-    .footer-desc { font-size: 0.9rem; }
-    .footer-links a { font-size: 0.9rem; }
-    .footer-contact-list li { font-size: 0.9rem; }
+    .footer-col { text-align: center; }
+    .footer-col h3::after { left: 50%; transform: translateX(-50%); }
+    .footer-logo { justify-content: center; }
+    .footer-socials { justify-content: center; }
+    .footer-links { text-align: center; }
+    .footer-links a { justify-content: center; }
+    .footer-contact-list li { justify-content: center; text-align: left; }
+    .footer-contact-list { max-width: 280px; margin: 0 auto; }
+    .footer-col h3 { font-size: 1.1rem; margin-bottom: 22px; }
+    .footer-desc { font-size: 0.9rem; text-align: center; }
     .footer-bottom-container { flex-direction: column; gap: 10px; text-align: center; }
     .footer-bottom-links { justify-content: center; flex-wrap: wrap; gap: 12px; }
     .footer-bottom p, .footer-bottom-links a { font-size: 0.82rem; }
