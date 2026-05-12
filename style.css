@@ -377,6 +377,10 @@ h1, h2, h3 { font-family: 'Outfit', sans-serif; font-weight: 700; }
     .section-subtitle { font-size: 0.97rem; text-align: center; }
     .section-header { text-align: center; padding: 0 5px; }
     .hero-tag, .doc-overline { font-size: 0.78rem; }
+    /* Global center all headings and text on mobile */
+    h1, h2, h3, .hero-tag, .doc-overline, .hero-subtitle, .section-subtitle, .hero-main-title { text-align: center; }
+    .hero-left, .hero-right, .stat-card, .expertise-card, .why-card, .step-card { text-align: center; }
+    .doc-overline { display: block; text-align: center; }
 
     /* Top Bar - hide on mobile */
     .top-bar { display: none; }
@@ -384,7 +388,7 @@ h1, h2, h3 { font-family: 'Outfit', sans-serif; font-weight: 700; }
     /* Hero */
     .hero-screenshot-section { padding: 40px 0 60px; }
     .hero-layout { gap: 40px; }
-    .hero-main-title { font-size: 2.2rem !important; line-height: 1.2; }
+    .hero-main-title { font-size: 2.6rem !important; line-height: 1.15; text-align: center; }
     .hero-subtitle { font-size: 0.95rem; text-align: center; margin-bottom: 28px; }
     .patient-badge { font-size: 0.8rem; padding: 5px 14px; }
 
@@ -392,13 +396,13 @@ h1, h2, h3 { font-family: 'Outfit', sans-serif; font-weight: 700; }
     .hero-cta-group { flex-direction: column; align-items: stretch; gap: 12px; margin-bottom: 30px; }
     .btn-whatsapp, .btn-ghost { width: 100%; justify-content: center; font-size: 0.95rem; padding: 14px 20px; }
 
-    /* Quick Stats - horizontal scroll on mobile */
-    .hero-quick-stats { display: flex; flex-direction: row; flex-wrap: nowrap; overflow-x: auto; gap: 10px; width: 100%; padding-bottom: 8px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
-    .hero-quick-stats::-webkit-scrollbar { display: none; }
-    .q-stat { min-width: 140px; flex-shrink: 0; padding: 12px 15px; gap: 10px; }
-    .q-stat-icon { width: 34px; height: 34px; font-size: 0.95rem; flex-shrink: 0; }
-    .q-stat-info strong { font-size: 0.95rem; }
-    .q-stat-info span { font-size: 0.72rem; }
+    /* Quick Stats - grid layout on mobile (no overflow) */
+    .hero-quick-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; width: 100%; padding-bottom: 0; }
+    .q-stat { min-width: unset; flex-shrink: unset; padding: 10px 8px; gap: 8px; flex-direction: column; align-items: center; text-align: center; border-radius: 12px; }
+    .q-stat-icon { width: 32px; height: 32px; font-size: 0.9rem; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+    .q-stat-info { text-align: center; }
+    .q-stat-info strong { font-size: 0.82rem; display: block; }
+    .q-stat-info span { font-size: 0.68rem; }
 
     /* Image Card */
     .hero-right { justify-content: center; }
@@ -480,14 +484,18 @@ h1, h2, h3 { font-family: 'Outfit', sans-serif; font-weight: 700; }
 /* Small Mobile (max 480px) */
 @media (max-width: 480px) {
     .container { padding: 0 12px; }
-    .hero-main-title { font-size: 1.95rem !important; }
-    .section-title { font-size: 1.8rem !important; }
-    .doc-main-heading { font-size: 1.8rem !important; }
+    .hero-main-title { font-size: 2.3rem !important; }
+    .section-title { font-size: 1.85rem !important; }
+    .doc-main-heading { font-size: 1.85rem !important; }
     .image-card-main { max-width: 270px; height: 330px; }
     .expertise-heading-teal { font-size: 1.7rem; }
     .stats-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
-    .hero-quick-stats { gap: 8px; }
-    .q-stat { min-width: 120px; padding: 10px 12px; }
+    /* Stats boxes: 3-col grid stays, just smaller padding */
+    .hero-quick-stats { gap: 6px; }
+    .q-stat { padding: 9px 5px; }
+    .q-stat-icon { width: 28px; height: 28px; font-size: 0.8rem; }
+    .q-stat-info strong { font-size: 0.75rem; }
+    .q-stat-info span { font-size: 0.62rem; }
     .patient-badge { font-size: 0.75rem; }
     .footer-socials a { width: 32px; height: 32px; }
     .doc-features-grid { grid-template-columns: 1fr; }
