@@ -297,13 +297,15 @@ h1, h2, h3 { font-family: 'Outfit', sans-serif; font-weight: 700; }
 
 /* Tablet (992px - 1100px) */
 @media (max-width: 1100px) {
-    .hero-layout { grid-template-columns: 1fr; gap: 60px; text-align: center; }
+    .hero-layout { grid-template-columns: 1fr; gap: 50px; text-align: center; }
     .hero-left { display: flex; flex-direction: column; align-items: center; }
     .hero-right { justify-content: center; }
     .tag-top { top: 50%; left: -30px; }
     .tag-bottom { bottom: 5%; left: -20px; }
-    .hero-main-title { font-size: 3.5rem; }
-    .hero-subtitle { max-width: 100%; }
+    .hero-main-title { font-size: 3.2rem; }
+    .hero-subtitle { max-width: 100%; text-align: center; }
+    .hero-cta-group { justify-content: center; }
+    .hero-quick-stats { justify-content: center; }
     .stats-grid { grid-template-columns: repeat(2, 1fr); }
     .section-title { font-size: 2.8rem; }
 }
@@ -312,6 +314,9 @@ h1, h2, h3 { font-family: 'Outfit', sans-serif; font-weight: 700; }
 @media (max-width: 992px) {
     .container { padding: 0 20px; }
     .section-padding { padding: 70px 0; }
+    .section-title { font-size: 2.4rem; }
+    .section-subtitle { font-size: 1.05rem; text-align: center; }
+    .section-header { text-align: center; }
 
     /* Top Bar */
     .top-bar-info { display: none; }
@@ -323,122 +328,170 @@ h1, h2, h3 { font-family: 'Outfit', sans-serif; font-weight: 700; }
     .mobile-nav-drawer { display: flex; }
 
     /* Hero */
-    .hero-screenshot-section { padding: 60px 0 80px; }
-    .hero-main-title { font-size: 3rem; }
-    .hero-cta-group { justify-content: center; flex-wrap: wrap; }
-    .hero-quick-stats { flex-wrap: wrap; justify-content: center; }
-    .image-card-main { width: 380px; height: 460px; }
+    .hero-screenshot-section { padding: 55px 0 75px; }
+    .hero-main-title { font-size: 2.8rem; }
+    .hero-subtitle { font-size: 1.05rem; text-align: center; }
+    .hero-cta-group { justify-content: center; flex-wrap: wrap; gap: 12px; }
+    .hero-quick-stats { flex-wrap: wrap; justify-content: center; gap: 12px; }
+    .q-stat { min-width: 140px; }
+    .image-card-main { width: 360px; height: 440px; }
 
-    /* Stats */
+    /* Stats Grid */
     .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .stat-card { padding: 30px 20px; }
+    .stat-card i { font-size: 2.8rem; }
+    .stat-card h3 { font-size: 1.2rem; }
 
-    /* Expertise */
+    /* Expertise Grid */
     .expertise-grid { grid-template-columns: repeat(2, 1fr); }
     .expertise-detail-layout { grid-template-columns: 1fr; gap: 50px; }
     .expertise-heading-teal { font-size: 2.2rem; white-space: normal; }
 
     /* About Doctor */
-    .about-doc-layout { grid-template-columns: 1fr; gap: 60px; text-align: center; }
-    .about-doc-image { padding: 20px; max-width: 480px; margin: 0 auto; }
+    .about-doc-layout { grid-template-columns: 1fr; gap: 50px; text-align: center; }
+    .about-doc-image { padding: 20px; max-width: 440px; margin: 0 auto; }
+    .about-doc-content { text-align: center; }
     .doc-experience-badge { right: 0; bottom: -20px; }
     .doc-credentials { justify-content: center; }
-    .doc-features-grid { grid-template-columns: 1fr 1fr; text-align: left; }
+    .doc-features-grid { grid-template-columns: 1fr 1fr; text-align: left; display: inline-grid; }
+    .doc-para { text-align: left; }
 
     /* Why Choose / Steps */
     .why-choose-grid { grid-template-columns: repeat(2, 1fr); }
     .steps-grid { grid-template-columns: repeat(2, 1fr); }
-
-    /* Testimonials */
-    .testimonial-row { gap: 15px; }
+    .why-card { text-align: center; }
+    .why-icon { display: block; margin: 0 auto 20px; }
 
     /* FAQ */
     .faq-question { font-size: 1rem; padding: 16px 20px; }
 
     /* Footer */
-    .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
-    .section-title { font-size: 2.5rem; }
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 35px; }
 }
 
 /* Mobile (max 768px) */
 @media (max-width: 768px) {
-    .container { padding: 0 16px; }
-    .section-padding { padding: 60px 0; }
-    .section-title { font-size: 2.2rem; letter-spacing: -0.5px; }
-    .section-subtitle { font-size: 1rem; }
-    .hero-tag, .doc-overline { font-size: 0.8rem; }
+    .container { padding: 0 15px; }
+    .section-padding { padding: 55px 0; }
+    .section-title { font-size: 2rem !important; letter-spacing: -0.5px; }
+    .section-subtitle { font-size: 0.97rem; text-align: center; }
+    .section-header { text-align: center; padding: 0 5px; }
+    .hero-tag, .doc-overline { font-size: 0.78rem; }
 
-    /* Top Bar */
+    /* Top Bar - hide on mobile */
     .top-bar { display: none; }
 
     /* Hero */
-    .hero-screenshot-section { padding: 50px 0 70px; }
-    .hero-main-title { font-size: 2.5rem; line-height: 1.15; }
-    .hero-subtitle { font-size: 1rem; }
-    .hero-cta-group { flex-direction: column; align-items: stretch; gap: 12px; }
-    .btn-whatsapp, .btn-ghost { width: 100%; justify-content: center; font-size: 1rem; padding: 14px 24px; }
-    .hero-quick-stats { flex-direction: column; gap: 12px; width: 100%; }
-    .q-stat { min-width: 100%; }
+    .hero-screenshot-section { padding: 40px 0 60px; }
+    .hero-layout { gap: 40px; }
+    .hero-main-title { font-size: 2.2rem !important; line-height: 1.2; }
+    .hero-subtitle { font-size: 0.95rem; text-align: center; margin-bottom: 28px; }
+    .patient-badge { font-size: 0.8rem; padding: 5px 14px; }
+
+    /* CTA Buttons */
+    .hero-cta-group { flex-direction: column; align-items: stretch; gap: 12px; margin-bottom: 30px; }
+    .btn-whatsapp, .btn-ghost { width: 100%; justify-content: center; font-size: 0.95rem; padding: 14px 20px; }
+
+    /* Quick Stats - horizontal scroll on mobile */
+    .hero-quick-stats { display: flex; flex-direction: row; flex-wrap: nowrap; overflow-x: auto; gap: 10px; width: 100%; padding-bottom: 8px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+    .hero-quick-stats::-webkit-scrollbar { display: none; }
+    .q-stat { min-width: 140px; flex-shrink: 0; padding: 12px 15px; gap: 10px; }
+    .q-stat-icon { width: 34px; height: 34px; font-size: 0.95rem; flex-shrink: 0; }
+    .q-stat-info strong { font-size: 0.95rem; }
+    .q-stat-info span { font-size: 0.72rem; }
+
+    /* Image Card */
     .hero-right { justify-content: center; }
-    .image-card-main { width: 100%; max-width: 320px; height: 380px; }
-    .floating-tag { min-width: 180px; padding: 10px 14px; font-size: 0.85rem; }
-    .tag-top { top: 45%; left: -10px; }
-    .tag-bottom { bottom: 5%; left: 5px; }
-    .trust-badge { top: -15px; right: -10px; min-width: 130px; padding: 12px 15px; }
+    .image-card-main { width: 100%; max-width: 300px; height: 360px; }
+    .floating-tag { min-width: 160px; padding: 9px 12px; font-size: 0.8rem; gap: 10px; }
+    .floating-tag i { width: 32px; height: 32px; font-size: 1rem; }
+    .tag-top { top: 40%; left: -8px; }
+    .tag-bottom { bottom: 8%; left: 5px; }
+    .trust-badge { top: -12px; right: -8px; min-width: 120px; padding: 10px 12px; }
+    .trust-badge span { font-size: 0.72rem; }
 
-    /* Stats */
-    .stats-grid { grid-template-columns: 1fr; gap: 20px; }
-    .stat-card { padding: 30px 20px; }
+    /* Stats Grid */
+    .stats-grid { grid-template-columns: 1fr 1fr; gap: 15px; }
+    .stat-card { padding: 25px 15px; }
+    .stat-card i { font-size: 2.4rem; margin-bottom: 15px; }
+    .stat-card h3 { font-size: 1.1rem; margin-bottom: 10px; }
+    .stat-card p { font-size: 0.88rem; }
 
-    /* Services/Expertise */
-    .expertise-grid { grid-template-columns: 1fr; gap: 20px; }
-    .expertise-card { padding: 30px 20px; }
+    /* Expertise Cards */
+    .expertise-grid { grid-template-columns: 1fr; gap: 16px; }
+    .expertise-card { padding: 28px 20px; }
+    .expertise-card h3 { font-size: 1.2rem; }
+    .expertise-card .icon-wrapper { width: 65px; height: 65px; margin-bottom: 18px; }
+    .expertise-card i { font-size: 2rem; }
 
     /* Expertise Detail */
     .expertise-image-wrapper::before { display: none; }
-    .expertise-heading-teal { font-size: 2rem; }
-    .expertise-check-list li { font-size: 1rem; }
+    .expertise-heading-teal { font-size: 1.9rem; }
+    .expertise-check-list li { font-size: 0.97rem; gap: 10px; }
 
     /* About Doctor */
-    .about-doctor-section { padding: 60px 0; }
-    .about-doc-layout { gap: 40px; }
+    .about-doctor-section { padding: 55px 0; }
+    .about-doc-layout { gap: 35px; text-align: center; }
     .about-doc-image { max-width: 100%; padding: 10px; }
-    .doc-main-heading { font-size: 2.4rem; }
-    .doc-features-grid { grid-template-columns: 1fr; }
-    .doc-experience-badge { right: 10px; bottom: -15px; padding: 12px 18px; }
-    .doc-experience-badge i { font-size: 1.4rem; }
-    .badge-text strong { font-size: 1rem; }
+    .about-doc-content { text-align: center; }
+    .doc-main-heading { font-size: 2rem !important; }
+    .doc-para { font-size: 0.97rem; text-align: left; }
+    .doc-features-grid { grid-template-columns: 1fr 1fr; display: grid; text-align: left; }
+    .doc-feature-item { font-size: 0.9rem; }
+    .doc-experience-badge { right: 5px; bottom: -15px; padding: 10px 15px; }
+    .doc-experience-badge i { font-size: 1.3rem; }
+    .badge-text strong { font-size: 0.95rem; }
+    .badge-text span { font-size: 0.78rem; }
+    .cred-pill { font-size: 0.82rem; padding: 6px 14px; }
 
     /* Why Choose */
-    .why-choose-grid { grid-template-columns: 1fr; gap: 20px; }
+    .why-choose-grid { grid-template-columns: 1fr; gap: 15px; }
+    .why-card { padding: 28px 22px; text-align: center; }
+    .why-icon { display: block; margin: 0 auto 15px; }
+    .why-card h3 { font-size: 1.2rem; }
+    .why-card p { font-size: 0.9rem; }
 
     /* Steps */
-    .steps-grid { grid-template-columns: 1fr; gap: 30px; }
+    .steps-grid { grid-template-columns: 1fr; gap: 25px; }
+    .step-number { width: 58px; height: 58px; font-size: 1.5rem; }
+    .step-card h3 { font-size: 1.2rem; }
+    .step-card p { font-size: 0.9rem; }
 
     /* Testimonials */
-    .testimonial-card { min-width: 280px; padding: 24px 20px; }
+    .testimonial-card { min-width: 260px; padding: 22px 18px; }
+    .testimonial-card p { font-size: 0.97rem; }
 
     /* FAQ */
-    .faq-question { font-size: 1rem; padding: 16px 18px; }
-    .faq-answer p { padding: 0 18px 16px; font-size: 1rem; }
+    .faq-question { font-size: 0.97rem; padding: 15px 16px; }
+    .faq-answer p { padding: 0 16px 15px; font-size: 0.97rem; }
 
     /* Footer */
-    .main-footer { padding-top: 50px; }
-    .footer-grid { grid-template-columns: 1fr; gap: 35px; }
-    .footer-bottom-container { flex-direction: column; gap: 12px; text-align: center; }
-    .footer-bottom-links { justify-content: center; }
-    .footer-col h3 { font-size: 1.15rem; }
+    .main-footer { padding-top: 45px; }
+    .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+    .footer-col h3 { font-size: 1.1rem; margin-bottom: 18px; }
+    .footer-desc { font-size: 0.9rem; }
+    .footer-links a { font-size: 0.9rem; }
+    .footer-contact-list li { font-size: 0.9rem; }
+    .footer-bottom-container { flex-direction: column; gap: 10px; text-align: center; }
+    .footer-bottom-links { justify-content: center; flex-wrap: wrap; gap: 12px; }
+    .footer-bottom p, .footer-bottom-links a { font-size: 0.82rem; }
 }
 
 /* Small Mobile (max 480px) */
 @media (max-width: 480px) {
-    .hero-main-title { font-size: 2.1rem; }
-    .section-title { font-size: 1.9rem; }
-    .doc-main-heading { font-size: 2rem; }
-    .image-card-main { max-width: 280px; height: 340px; }
+    .container { padding: 0 12px; }
+    .hero-main-title { font-size: 1.95rem !important; }
+    .section-title { font-size: 1.8rem !important; }
+    .doc-main-heading { font-size: 1.8rem !important; }
+    .image-card-main { max-width: 270px; height: 330px; }
     .expertise-heading-teal { font-size: 1.7rem; }
-    .stats-grid { grid-template-columns: 1fr; }
-    .hero-cta-group { gap: 10px; }
-    .patient-badge { font-size: 0.78rem; }
+    .stats-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .hero-quick-stats { gap: 8px; }
+    .q-stat { min-width: 120px; padding: 10px 12px; }
+    .patient-badge { font-size: 0.75rem; }
     .footer-socials a { width: 32px; height: 32px; }
+    .doc-features-grid { grid-template-columns: 1fr; }
     .top-bar { display: none; }
+    .floating-tag { display: none; }
+    .trust-badge { top: -10px; right: -5px; min-width: 110px; padding: 8px 10px; }
 }
